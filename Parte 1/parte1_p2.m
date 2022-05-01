@@ -18,18 +18,9 @@ function [x_k, k, error] = parte1_p2(A, b)
                         suma_aux += A(i, j) * x_k(j);
                     endif
                 endfor
-            
+
                 x_k(i) = 1 / A(i, i) * (b(i) - suma_aux);
             endfor
         endif
     endfor
 endfunction
-
-% p = 1:0.1:25;
-% q = p;
-% m = length(p) + 1;
-
-% A = tridiagonal(p, q, m);
-% b = ones(m, 1);
-
-% [x_k, k, error] = parte1_p2(A, b);
