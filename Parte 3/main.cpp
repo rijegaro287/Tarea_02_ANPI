@@ -1,5 +1,4 @@
 #include <iostream>
-#include <armadillo>
 #include "parte3_p1.h"
 
 using namespace parte_3;
@@ -11,14 +10,12 @@ int main() {
         }
     }
 
-//    A = mat({
-//        {2,  5,  10},
-//        {5,  8,  13},
-//        {10, 13, 18}
-//    });
+    cout.precision(15);
 
     mat p_inv = pseudo_inversa(A);
+    mat p_inv_buena = pinv(A);
 
-    cout.precision(15);
     p_inv.raw_print(cout);
+    cout << "----------------------" << endl;
+    p_inv_buena.raw_print(cout);
 }
